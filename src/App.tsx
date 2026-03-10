@@ -29,7 +29,7 @@ function App() {
   };
 
   const isValidData =
-    formData.username === "username" && formData.password === "password";
+    formData.username === "user" && formData.password === "password";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
