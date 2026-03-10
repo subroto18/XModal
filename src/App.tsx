@@ -53,12 +53,13 @@ function App() {
     <div className="form_section">
       <div className="form">
         <h1 className="heading">Login Page</h1>
-        {loginStatus && (
-          <div>
-            <p>{show_message[loginStatus]}</p>
+        <div>
+          {loginStatus && <p>{show_message[loginStatus]}</p>}
+          {loginStatus == "success" && (
             <button onClick={handleLogout}>Logout</button>
-          </div>
-        )}
+          )}
+        </div>
+
         {loginStatus !== "success" && (
           <form onSubmit={handleSubmit} method="post">
             {inputs.map((input) => (
