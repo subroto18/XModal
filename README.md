@@ -31,3 +31,4 @@ The goal of this project was to practice **React fundamentals, state management,
 ---
 
 ## 📂 Project Structure
+# XModal
