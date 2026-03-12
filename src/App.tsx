@@ -1,10 +1,23 @@
+import { useState } from "react";
 import "./App.css";
-import Calculator from "./components/Calculator";
-
+import Button from "./ui/Button";
+import Modal from "./ui/Modal";
+import Form from "./components/Form";
 function App() {
+  const [open, setOpen] = useState(true);
   return (
     <div className="parent_section">
-      <Calculator />
+      <div className="parent">
+        <div className="modal">
+          <div className="modal-content">
+            <h1>User Details Modal</h1>
+            <Button onClick={() => setOpen(!open)} label="Open Form" />
+            <Modal isOpen={open} onClose={() => setOpen(false)}>
+              <Form />
+            </Modal>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

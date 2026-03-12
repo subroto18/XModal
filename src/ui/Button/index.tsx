@@ -1,20 +1,14 @@
-import styles from "./Button.module.css";
+import Styles from "./Button.module.css";
 
 type Props = {
-  value: string | number;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  key: string | number;
-};
+  label: string;
+  className?: string;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({ value, onClick, key }: Props) => {
+const Button = ({ label, className, ...rest }: Props) => {
   return (
-    <button
-      key={key}
-      className={`${styles.button}`}
-      onClick={(e) => onClick(e)}
-      value={value}
-    >
-      {value}
+    <button className={`${Styles.button} ${className}`} {...rest}>
+      {label}
     </button>
   );
 };
