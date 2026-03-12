@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
-import "./Modal.module.css";
+import "./Modal.css";
+
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
