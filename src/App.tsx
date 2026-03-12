@@ -4,14 +4,14 @@ import Button from "./ui/Button";
 import Modal from "./ui/Modal";
 import Form from "./components/Form";
 function App() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <div className="parent_section">
       <div className="parent">
+        <h1>User Details Modal</h1>
+        <Button onClick={() => setOpen(!open)} label="Open Form" />
         <div className="modal">
           <div className="modal-content">
-            <h1>User Details Modal</h1>
-            <Button onClick={() => setOpen(!open)} label="Open Form" />
             <Modal isOpen={open} onClose={() => setOpen(false)}>
               <Form />
             </Modal>
