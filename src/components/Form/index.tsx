@@ -66,9 +66,9 @@ const Index = () => {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validateDate(formData.date)) {
-      alert("Invalid date of birth. Date of birth cannot be in the future");
-    } else if (!validatePhone(formData.phone)) {
       alert("Invalid phone number. Please enter a 10-digit phone number.");
+    } else if (!validatePhone(formData.phone)) {
+      alert("Invalid date of birth. Date of birth cannot be in the future");
     } else {
       setFormData({
         username: "",

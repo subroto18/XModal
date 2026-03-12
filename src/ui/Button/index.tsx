@@ -7,7 +7,7 @@ type Props = {
 
 const Button = ({ label, className, ...rest }: Props) => {
   return (
-    <button className={`${Styles.button} ${className}`} {...rest}>
+    <button className={`${Styles.button} ${className ?? ""}`} {...rest}>
       {label}
     </button>
   );

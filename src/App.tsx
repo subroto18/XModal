@@ -10,13 +10,10 @@ function App() {
       <div className="parent">
         <h1>User Details Modal</h1>
         <Button onClick={() => setOpen(!open)} label="Open Form" />
-        <div className="modal">
-          <div className="modal-content">
-            <Modal isOpen={open} onClose={() => setOpen(false)}>
-              <Form />
-            </Modal>
-          </div>
-        </div>
+
+        <Modal isOpen={open} onClose={() => setOpen(false)}>
+          <Form />
+        </Modal>
       </div>
     </div>
   );
